@@ -808,6 +808,10 @@ h1, h2, h3, h4, .logo {
     display: none;
 }
 
+.netlify-form-definitions {
+    display: none;
+}
+
 .form-message {
     margin-top: 1rem;
     padding: 1rem;

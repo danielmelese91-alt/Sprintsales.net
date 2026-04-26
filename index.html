@@ -19,6 +19,33 @@
 </head>
 
 <body>
+    <div class="netlify-form-definitions" aria-hidden="true">
+        <form name="growth-sprint-registration" method="POST" data-netlify="true" netlify
+            data-netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="growth-sprint-registration">
+            <input name="bot-field">
+            <input name="fullName">
+            <input name="businessName">
+            <input name="email">
+            <input name="phone">
+            <input name="industry">
+            <input name="budget">
+            <input name="address">
+            <textarea name="goals"></textarea>
+            <input name="consent">
+        </form>
+        <form name="package-application" method="POST" data-netlify="true" netlify data-netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="package-application">
+            <input name="bot-field">
+            <input name="selectedPackage">
+            <input name="fullName">
+            <input name="businessName">
+            <input name="email">
+            <input name="phone">
+            <textarea name="goals"></textarea>
+        </form>
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
         <div class="container nav-container">
@@ -247,7 +274,7 @@
                     <p class="form-intro">Complete the form below to start your application.</p>
 
                     <form id="leadForm" name="growth-sprint-registration" class="contact-form" method="POST"
-                        action="/thank-you.html" data-netlify="true" data-netlify-honeypot="bot-field">
+                        action="/thank-you.html" data-netlify="true" netlify data-netlify-honeypot="bot-field">
                         <input type="hidden" name="form-name" value="growth-sprint-registration">
                         <p class="hidden">
                             <label>Do not fill this out if you are human: <input name="bot-field"></label>

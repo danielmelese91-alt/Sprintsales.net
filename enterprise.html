@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Package | Sprintsales</title>
+    <meta name="description" content="A B2B digital growth package for manufacturing and wholesale businesses.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="assets/sprintsales-favicon.png">
+    <link rel="apple-touch-icon" href="assets/sprintsales-favicon.png">
+    <link rel="stylesheet" href="style.css?v=5">
+</head>
+
+<body class="package-page">
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">SPRINT<span class="highlight">SALES</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#divisions">Packages</a></li>
+                <li><a href="index.html#solutions">Process</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#registration" class="btn-outline">Register</a></li>
+            </ul>
+            <button class="hamburger" type="button" aria-label="Open navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="package-hero">
+            <div class="container package-hero-grid">
+                <div>
+                    <p class="eyebrow">Enterprise</p>
+                    <h1>Enterprise Scale Package</h1>
+                    <p>For manufacturers, factories, large producers, and wholesale businesses that need a stronger B2B
+                        digital presence, a more organized sales funnel, and trained internal teams.</p>
+                </div>
+                <div class="package-summary">
+                    <div class="summary-card">
+                        <span>Investment</span>
+                        <strong>150,000 birr</strong>
+                    </div>
+                    <div class="summary-card">
+                        <span>Best for</span>
+                        <strong>Manufacturing and wholesale</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="package-detail-section">
+            <div class="container">
+                <h2 class="section-title">What We Build for You</h2>
+                <p class="section-subtitle">Everything in the Retail & Service package, plus a deeper B2B system for
+                    market clarity, lead generation, team training, and executive visibility.</p>
+
+                <div class="detail-grid">
+                    <div class="service-detail-card">
+                        <h3>Digital Storefront Foundation</h3>
+                        <p>You receive the core website, social commerce setup, customer automation, and handover
+                            training included in the Retail & Service package.</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>Premium B2B Corporate Website</h3>
+                        <p>We build a more advanced company website with capability pages, product/service structure,
+                            bulk-order request forms, and multi-language readiness where useful.</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>End-to-End Sales Funnel Architecture</h3>
+                        <p>We design lead capture points, follow-up flows, CRM-ready structure, and campaign paths that
+                            move prospects from interest to sales conversation.</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>Market Intelligence Report</h3>
+                        <p>We review competitors, buyer behavior, market positioning, and digital opportunities so your
+                            strategy is based on practical signals instead of guesswork.</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>Omnichannel Social Media Automation</h3>
+                        <p>We set up automation across Instagram, Telegram, TikTok, Facebook, and LinkedIn where each
+                            channel has a clear role in the B2B sales journey.</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>Dedicated Staff Training Program</h3>
+                        <p>Your sales and marketing staff receive focused training on the CRM, content workflow, lead
+                            handling, automation tools, and reporting habits.</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>Executive Analytics Dashboard</h3>
+                        <p>We create a practical dashboard for tracking leads, website traffic, campaign activity, and
+                            conversion signals that matter to management.</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>Digital Brand Kit & Factory Showcase</h3>
+                        <p>We organize your brand assets and create stronger corporate presentation materials, including
+                            AI-assisted facility showcase concepts when appropriate.</p>
+                    </div>
+                </div>
+
+                <div class="package-cta-band">
+                    <div>
+                        <h2>Ready to apply for this package?</h2>
+                        <div class="price-tag">150,000 birr</div>
+                    </div>
+                    <button class="btn-primary" type="button" data-open-apply
+                        data-package="Enterprise - Enterprise Scale Package">Apply for this service</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="applyModal" aria-hidden="true">
+        <div class="modal-card glass-card">
+            <div class="modal-header">
+                <div>
+                    <p class="eyebrow">Package application</p>
+                    <h2 id="modalTitle">Apply for this service</h2>
+                </div>
+                <button class="modal-close" type="button" data-close-modal aria-label="Close application form">x</button>
+            </div>
+            <form name="package-application" class="contact-form" method="POST" action="/thank-you.html"
+                data-netlify="true" data-netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="package-application">
+                <input type="hidden" id="selectedPackage" name="selectedPackage"
+                    value="Enterprise - Enterprise Scale Package">
+                <p class="hidden"><label>Do not fill this out if you are human: <input name="bot-field"></label></p>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="businessName">Business Name</label>
+                        <input type="text" id="businessName" name="businessName" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="goals">Tell us what you want to improve</label>
+                    <textarea id="goals" name="goals" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary full-width">Submit Registration</button>
+                <div class="form-message hidden"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js?v=6"></script>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Import Export Package | Sprintsales</title>
+    <meta name="description" content="A trade automation package for importers, exporters, and distributors.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="assets/sprintsales-favicon.png">
+    <link rel="apple-touch-icon" href="assets/sprintsales-favicon.png">
+    <link rel="stylesheet" href="style.css?v=5">
+</head>
+
+<body class="package-page">
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">SPRINT<span class="highlight">SALES</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#divisions">Packages</a></li>
+                <li><a href="index.html#solutions">Process</a></li>
+                <li><a href="index.html#about">About Us</a></li>
+                <li><a href="index.html#registration" class="btn-outline">Register</a></li>
+            </ul>
+            <button class="hamburger" type="button" aria-label="Open navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="package-hero">
+            <div class="container package-hero-grid">
+                <div>
+                    <p class="eyebrow">Import Export</p>
+                    <h1>Trade Automation System</h1>
+                    <p>For importers, exporters, and distributors that need clearer product presentation, better stock
+                        visibility, and faster communication with buyers and trade partners.</p>
+                </div>
+                <div class="package-summary">
+                    <div class="summary-card">
+                        <span>Investment</span>
+                        <strong>99,000 birr</strong>
+                    </div>
+                    <div class="summary-card">
+                        <span>Best for</span>
+                        <strong>Trade and distribution teams</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="package-detail-section">
+            <div class="container">
+                <h2 class="section-title">What We Build for You</h2>
+                <p class="section-subtitle">Everything in the Retail & Service package, plus trade-focused systems for
+                    inventory, catalogs, buyer communication, and B2B inquiries.</p>
+
+                <div class="detail-grid">
+                    <div class="service-detail-card">
+                        <h3>Digital Storefront Foundation</h3>
+                        <p>You receive the core website, social commerce setup, customer automation, and handover
+                            training included in the Retail & Service package.</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>Smart Inventory & Stock Structure</h3>
+                        <p>We create a practical stock visibility system that helps your team communicate availability,
+                            product categories, and priority items more clearly.</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>B2B Multi-Currency Readiness</h3>
+                        <p>We structure your digital presence to support local and international buyer conversations,
+                            pricing context, and payment workflow clarity.</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>WhatsApp Business Integration</h3>
+                        <p>We set up automated WhatsApp Business flows for trade inquiries, logistics updates, order
+                            follow-up, and repeated buyer questions.</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>Export-Ready Digital Catalogs</h3>
+                        <p>We prepare professional downloadable catalogs and product documents that are easier to share
+                            with importers, distributors, wholesalers, and trade partners.</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>AI-Assisted Inquiry Handling</h3>
+                        <p>We organize response flows for product availability, minimum order quantity, location,
+                            delivery, and next-step qualification.</p>
+                    </div>
+                </div>
+
+                <div class="package-cta-band">
+                    <div>
+                        <h2>Ready to apply for this package?</h2>
+                        <div class="price-tag">99,000 birr</div>
+                    </div>
+                    <button class="btn-primary" type="button" data-open-apply
+                        data-package="Import Export - Trade Automation System">Apply for this service</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="applyModal" aria-hidden="true">
+        <div class="modal-card glass-card">
+            <div class="modal-header">
+                <div>
+                    <p class="eyebrow">Package application</p>
+                    <h2 id="modalTitle">Apply for this service</h2>
+                </div>
+                <button class="modal-close" type="button" data-close-modal aria-label="Close application form">x</button>
+            </div>
+            <form name="package-application" class="contact-form" method="POST" action="/thank-you.html"
+                data-netlify="true" data-netlify-honeypot="bot-field">
+                <input type="hidden" name="form-name" value="package-application">
+                <input type="hidden" id="selectedPackage" name="selectedPackage"
+                    value="Import Export - Trade Automation System">
+                <p class="hidden"><label>Do not fill this out if you are human: <input name="bot-field"></label></p>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="businessName">Business Name</label>
+                        <input type="text" id="businessName" name="businessName" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="goals">Tell us what you want to improve</label>
+                    <textarea id="goals" name="goals" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary full-width">Submit Registration</button>
+                <div class="form-message hidden"></div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js?v=6"></script>
+</body>
+
+</html>

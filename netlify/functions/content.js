@@ -1,4 +1,4 @@
-import { getStore } from '@netlify/blobs';
+import { connectLambda, getStore } from '@netlify/blobs';
 import { createHash } from 'node:crypto';
 
 const adminCredentialHash = '985ea6da09ca9412c7af3ae6ba0283ab34a63efd34d54275c9db8e1a1d87b48d';
@@ -19,6 +19,7 @@ const hashCredential = (email, password) => {
 };
 
 export const handler = async event => {
+  connectLambda(event);
   const store = getStore('sprintsales-content');
 
   if (event.httpMethod === 'GET') {

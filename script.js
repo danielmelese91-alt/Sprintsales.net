@@ -9,6 +9,9 @@ const aboutContentKey = 'sprintsalesAboutContent';
 const teamContentKey = 'sprintsalesTeamContent';
 const portfolioContentKey = 'sprintsalesPortfolioContent';
 const adminCredentialHash = '985ea6da09ca9412c7af3ae6ba0283ab34a63efd34d54275c9db8e1a1d87b48d';
+const contentFunctionUrl = '/.netlify/functions/content';
+let adminEmail = '';
+let adminPassword = '';
 
 const defaultHeroSlides = [
     {
@@ -106,6 +109,57 @@ const getStoredObject = (key, fallback) => {
     } catch {
         return fallback;
     }
+};
+
+const applyContentBundle = bundle => {
+    if (!bundle || typeof bundle !== 'object') return;
+    if (Array.isArray(bundle.heroSlides)) {
+        localStorage.setItem(heroSlidesKey, JSON.stringify(bundle.heroSlides));
+    }
+    if (bundle.aboutContent && typeof bundle.aboutContent === 'object') {
+        localStorage.setItem(aboutContentKey, JSON.stringify(bundle.aboutContent));
+    }
+    if (Array.isArray(bundle.teamContent)) {
+        localStorage.setItem(teamContentKey, JSON.stringify(bundle.teamContent));
+    }
+    if (Array.isArray(bundle.portfolioContent)) {
+        localStorage.setItem(portfolioContentKey, JSON.stringify(bundle.portfolioContent));
+    }
+};
+
+const loadLiveContent = async () => {
+    if (isLocalPreview) return;
+    try {
+        const response = await fetch(`${contentFunctionUrl}?t=${Date.now()}`, { cache: 'no-store' });
+        if (!response.ok) return;
+        const bundle = await response.json();
+        applyContentBundle(bundle);
+        renderHeroSlides();
+        renderAboutPageContent();
+    } catch {
+        // Keep the built-in defaults if the live content API is unavailable.
+    }
+};
+
+const saveLiveContent = async content => {
+    if (isLocalPreview) return content;
+    const response = await fetch(contentFunctionUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            email: adminEmail,
+            password: adminPassword,
+            ...content
+        })
+    });
+
+    if (!response.ok) {
+        throw new Error('Live content save failed');
+    }
+
+    const bundle = await response.json();
+    applyContentBundle(bundle);
+    return bundle;
 };
 
 window.addEventListener('scroll', () => {
@@ -212,6 +266,7 @@ const renderAboutPageContent = () => {
 };
 
 renderAboutPageContent();
+loadLiveContent();
 
 const heroSlides = document.querySelectorAll('.hero-slide');
 const heroDots = document.querySelectorAll('.hero-slide-controls span');
@@ -584,6 +639,8 @@ if (adminApp) {
         const passHash = await hashCredential(`${email}:${passcode}`);
 
         if (passHash === adminCredentialHash) {
+            adminEmail = email;
+            adminPassword = passcode;
             unlockAdmin();
         } else if (authMessage) {
             authMessage.innerText = 'Incorrect admin email or password.';
@@ -701,7 +758,7 @@ if (adminApp) {
         renderSubmissions();
     };
 
-    slidesForm.addEventListener('submit', event => {
+    slidesForm.addEventListener('submit', async event => {
         event.preventDefault();
         const formData = new FormData(slidesForm);
         const nextSlides = Array.from({ length: 5 }, (_, index) => ({
@@ -712,7 +769,12 @@ if (adminApp) {
         })).filter(slide => slide.image);
 
         localStorage.setItem(heroSlidesKey, JSON.stringify(nextSlides));
-        showSuccessPopup('Hero slide content has been saved for this browser preview.');
+        try {
+            await saveLiveContent({ heroSlides: nextSlides });
+            showSuccessPopup(isLocalPreview ? 'Hero slide content has been saved for this browser preview.' : 'Hero slide content has been saved to the live website.');
+        } catch {
+            showSuccessPopup('Saved in this browser, but the live website could not be updated. Please try again.');
+        }
     });
 
     adminApp.addEventListener('change', event => {
@@ -731,14 +793,19 @@ if (adminApp) {
         reader.readAsDataURL(file);
     });
 
-    aboutForm?.addEventListener('submit', event => {
+    aboutForm?.addEventListener('submit', async event => {
         event.preventDefault();
         const data = Object.fromEntries(new FormData(aboutForm).entries());
         localStorage.setItem(aboutContentKey, JSON.stringify(data));
-        showSuccessPopup('About page content has been saved for this browser preview.');
+        try {
+            await saveLiveContent({ aboutContent: data });
+            showSuccessPopup(isLocalPreview ? 'About page content has been saved for this browser preview.' : 'About page content has been saved to the live website.');
+        } catch {
+            showSuccessPopup('Saved in this browser, but the live website could not be updated. Please try again.');
+        }
     });
 
-    teamForm?.addEventListener('submit', event => {
+    teamForm?.addEventListener('submit', async event => {
         event.preventDefault();
         const data = new FormData(teamForm);
         const nextTeam = Array.from({ length: 8 }, (_, index) => ({
@@ -752,10 +819,15 @@ if (adminApp) {
         })).filter(member => member.name || member.image || member.bio);
 
         localStorage.setItem(teamContentKey, JSON.stringify(nextTeam));
-        showSuccessPopup('Team profiles have been saved for this browser preview.');
+        try {
+            await saveLiveContent({ teamContent: nextTeam });
+            showSuccessPopup(isLocalPreview ? 'Team profiles have been saved for this browser preview.' : 'Team profiles have been saved to the live website.');
+        } catch {
+            showSuccessPopup('Saved in this browser, but the live website could not be updated. Please try again.');
+        }
     });
 
-    portfolioForm?.addEventListener('submit', event => {
+    portfolioForm?.addEventListener('submit', async event => {
         event.preventDefault();
         const data = new FormData(portfolioForm);
         const nextPortfolio = Array.from({ length: 8 }, (_, index) => ({
@@ -767,7 +839,12 @@ if (adminApp) {
         })).filter(item => item.title || item.media || item.description);
 
         localStorage.setItem(portfolioContentKey, JSON.stringify(nextPortfolio));
-        showSuccessPopup('Portfolio items have been saved for this browser preview.');
+        try {
+            await saveLiveContent({ portfolioContent: nextPortfolio });
+            showSuccessPopup(isLocalPreview ? 'Portfolio items have been saved for this browser preview.' : 'Portfolio items have been saved to the live website.');
+        } catch {
+            showSuccessPopup('Saved in this browser, but the live website could not be updated. Please try again.');
+        }
     });
 
     resetSlidesButton?.addEventListener('click', () => {

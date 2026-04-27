@@ -15,14 +15,14 @@
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="assets/sprintsales-favicon.png">
     <link rel="apple-touch-icon" href="assets/sprintsales-favicon.png">
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=7">
 </head>
 
 <body>
     <div class="netlify-form-definitions" aria-hidden="true">
-        <form name="growth-sprint-registration" method="POST" data-netlify="true" netlify
+        <form name="meeting-booking" method="POST" data-netlify="true" netlify
             data-netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="growth-sprint-registration">
+            <input type="hidden" name="form-name" value="meeting-booking">
             <input name="bot-field">
             <input name="fullName">
             <input name="businessName">
@@ -30,6 +30,8 @@
             <input name="phone">
             <input name="industry">
             <input name="budget">
+            <input name="meetingDate">
+            <input name="meetingTime">
             <input name="address">
             <textarea name="goals"></textarea>
             <input name="consent">
@@ -40,9 +42,15 @@
             <input name="selectedPackage">
             <input name="fullName">
             <input name="businessName">
+            <input name="businessType">
+            <input name="businessAddress">
             <input name="email">
             <input name="phone">
+            <input name="employees">
+            <input name="locations">
+            <input name="discoverySource">
             <textarea name="goals"></textarea>
+            <input name="agreementAccepted">
         </form>
     </div>
 
@@ -52,11 +60,11 @@
             <a href="#" class="logo">SPRINT<span class="highlight">SALES</span></a>
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
-                <li><a href="#divisions">Packages</a></li>
+                <li><a href="packages.html">Packages</a></li>
                 <li><a href="#solutions">Process</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#registration">Register</a></li>
-                <li><a href="#registration" class="btn-outline">Book a Talk</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#registration">Free Meeting</a></li>
+                <li><a href="#registration" class="btn-outline">Book a Meeting</a></li>
             </ul>
             <button class="hamburger" type="button" aria-label="Open navigation" aria-expanded="false">
                 <span class="bar"></span>
@@ -76,8 +84,8 @@
             <p class="hero-subtitle">Based in Addis Ababa, Ethiopia. We empower businesses to scale through AI,
                 multi-channel automation, and premium digital showrooms.</p>
             <div class="hero-cta">
-                <a href="#registration" class="btn-primary">Transform Your Sales</a>
-                <a href="#divisions" class="btn-secondary">Explore Packages</a>
+                <a href="#registration" class="btn-primary">Book a Free Meeting</a>
+                <a href="packages.html" class="btn-secondary">Explore Packages</a>
             </div>
             <div class="hero-metrics" aria-label="Sprintsales highlights">
                 <div>
@@ -95,78 +103,6 @@
             </div>
         </div>
     </header>
-
-    <!-- Offerings Section -->
-    <section class="divisions" id="divisions">
-        <div class="container">
-            <p class="eyebrow">Service packages</p>
-            <h2 class="section-title">Choose the Sales System Built for Your Business</h2>
-            <p class="section-subtitle">Each package is designed around the way your customers discover, trust, and buy
-                from you. Retail and service businesses share one package because both need the same customer-facing
-                engine: visibility, conversations, automation, and smooth handover.
-            </p>
-
-            <div class="card-grid package-grid">
-                <div class="glass-card offering-card">
-                    <div class="package-topline">
-                        <div class="card-icon">RS</div>
-                        <span class="package-fit">Retail & Service</span>
-                    </div>
-                    <h3>Digital Storefront Package</h3>
-                    <p class="package-audience">Built for retail and service businesses.</p>
-                    <p>For shops, salons, clinics, consultants, restaurants, and service providers that need a clean
-                        online presence and a system that turns attention into real inquiries.</p>
-                    <div class="price-tag">60,000 birr</div>
-                    <ul class="card-list">
-                        <li>Sales-focused website or booking hub</li>
-                        <li>Instagram Shop and Telegram sales setup</li>
-                        <li>Customer service automation for DMs and FAQs</li>
-                        <li>Training so your team can manage the system smoothly</li>
-                    </ul>
-                    <a href="retail-service.html" class="btn-secondary package-link" target="_blank"
-                        rel="noopener">See More</a>
-                </div>
-
-                <div class="glass-card offering-card active-card">
-                    <div class="package-topline">
-                        <div class="card-icon">EN</div>
-                        <span class="package-fit">Enterprise</span>
-                    </div>
-                    <h3>Enterprise Scale Package</h3>
-                    <p>For manufacturers, factories, large producers, and wholesalers that need structured B2B demand,
-                        stronger positioning, trained staff, and a complete sales funnel.</p>
-                    <div class="price-tag">150,000 birr</div>
-                    <ul class="card-list">
-                        <li>Everything in Retail & Service</li>
-                        <li>Premium B2B website and CRM-ready lead capture</li>
-                        <li>Market intelligence and positioning support</li>
-                        <li>Omnichannel automation and dedicated staff training</li>
-                    </ul>
-                    <a href="enterprise.html" class="btn-secondary package-link" target="_blank"
-                        rel="noopener">See More</a>
-                </div>
-
-                <div class="glass-card offering-card">
-                    <div class="package-topline">
-                        <div class="card-icon">TR</div>
-                        <span class="package-fit">Import & Export</span>
-                    </div>
-                    <h3>Trade Automation System</h3>
-                    <p>For importers, exporters, and wholesalers that need faster inquiry handling, better stock
-                        visibility, organized catalogs, and AI-assisted communication with serious buyers.</p>
-                    <div class="price-tag">99,000 birr</div>
-                    <ul class="card-list">
-                        <li>Everything in Retail & Service</li>
-                        <li>Smart inventory and stock visibility setup</li>
-                        <li>B2B-ready digital catalog structure</li>
-                        <li>WhatsApp and social inquiry automation</li>
-                    </ul>
-                    <a href="import-export.html" class="btn-secondary package-link" target="_blank"
-                        rel="noopener">See More</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- The 30-Day Blueprint Section -->
     <section class="solutions" id="solutions">
@@ -245,37 +181,39 @@
             <div class="registration-layout">
                 <div class="registration-copy">
                     <p class="eyebrow">Client registration</p>
-                    <h2 class="section-title">Register for a Growth Sprint</h2>
-                    <p class="section-subtitle">Tell us where your business is now and what kind of sales system you
-                        want to build. We review every registration and contact qualified businesses with the next steps.
+                    <h2 class="section-title">Book a Free Strategy Meeting</h2>
+                    <p class="section-subtitle">Tell us where your business is now and choose a preferred meeting time.
+                        We will confirm availability, then use the call to explain our services and where Sprintsales
+                        may help your business grow.
                     </p>
 
                     <div class="registration-proof">
                         <div>
                             <span>01</span>
-                            <strong>Submit your details</strong>
-                            <p>Company, contact, industry, budget range, and the challenge you want solved.</p>
+                            <strong>Submit your meeting request</strong>
+                            <p>Share your company, contact details, business type, and preferred meeting time.</p>
                         </div>
                         <div>
                             <span>02</span>
-                            <strong>We review fit</strong>
-                            <p>Our team checks whether the 30-day sprint is the right match for your goals.</p>
+                            <strong>We confirm the time</strong>
+                            <p>If your preferred slot is already booked, we will suggest the closest available option.</p>
                         </div>
                         <div>
                             <span>03</span>
-                            <strong>Strategy call</strong>
-                            <p>If there is a fit, we schedule a focused call and map your growth infrastructure.</p>
+                            <strong>Free discovery meeting</strong>
+                            <p>You will understand our packages, possible benefits, and the best next step for you.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="contact-card glass-card">
-                    <h3>Business Registration Form</h3>
-                    <p class="form-intro">Complete the form below to start your application.</p>
+                    <h3>Free Meeting Request</h3>
+                    <p class="form-intro">Book a free conversation with us. This is not a paid registration; it is a
+                        chance to understand our services and how working together may benefit your business.</p>
 
-                    <form id="leadForm" name="growth-sprint-registration" class="contact-form" method="POST"
+                    <form id="leadForm" name="meeting-booking" class="contact-form" method="POST"
                         action="/thank-you.html" data-netlify="true" netlify data-netlify-honeypot="bot-field">
-                        <input type="hidden" name="form-name" value="growth-sprint-registration">
+                        <input type="hidden" name="form-name" value="meeting-booking">
                         <p class="hidden">
                             <label>Do not fill this out if you are human: <input name="bot-field"></label>
                         </p>
@@ -290,6 +228,24 @@
                                 <label for="businessName">Business Name</label>
                                 <input type="text" id="businessName" name="businessName"
                                     placeholder="e.g. Sprintsales Corp" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="meetingDate">Preferred Meeting Date</label>
+                                <input type="date" id="meetingDate" name="meetingDate" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="meetingTime">Preferred Meeting Time</label>
+                                <select id="meetingTime" name="meetingTime" required>
+                                    <option value="">Select one</option>
+                                    <option value="Morning 9:00-11:00">Morning, 9:00-11:00</option>
+                                    <option value="Midday 11:00-1:00">Midday, 11:00-1:00</option>
+                                    <option value="Afternoon 2:00-4:00">Afternoon, 2:00-4:00</option>
+                                    <option value="Late afternoon 4:00-6:00">Late afternoon, 4:00-6:00</option>
+                                </select>
                             </div>
                         </div>
 
@@ -347,10 +303,13 @@
 
                         <label class="consent-row" for="consent">
                             <input type="checkbox" id="consent" name="consent" value="Agreed" required>
-                            <span>I agree to be contacted by Sprintsales about this registration.</span>
+                            <span>I agree to be contacted by Sprintsales about this free meeting request.</span>
                         </label>
 
-                        <button type="submit" class="btn-primary full-width">Submit Registration</button>
+                        <p class="form-note">Your selected time is a preference, not an automatic calendar booking. We
+                            confirm the final meeting time with you to avoid double-booking.</p>
+
+                        <button type="submit" class="btn-primary full-width">Book My Free Meeting</button>
                         <div id="formMessage" class="form-message hidden">Thank you. Your registration is ready to
                             submit.</div>
                     </form>
@@ -384,7 +343,7 @@
         </div>
     </footer>
 
-    <script src="script.js?v=6"></script>
+    <script src="script.js?v=7"></script>
 </body>
 
 </html>

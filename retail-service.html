@@ -14,7 +14,7 @@
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="assets/sprintsales-favicon.png">
     <link rel="apple-touch-icon" href="assets/sprintsales-favicon.png">
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=7">
 </head>
 
 <body class="package-page">
@@ -23,10 +23,10 @@
             <a href="index.html" class="logo">SPRINT<span class="highlight">SALES</span></a>
             <ul class="nav-links">
                 <li><a href="index.html#hero">Home</a></li>
-                <li><a href="index.html#divisions">Packages</a></li>
+                <li><a href="packages.html">Packages</a></li>
                 <li><a href="index.html#solutions">Process</a></li>
-                <li><a href="index.html#about">About Us</a></li>
-                <li><a href="index.html#registration" class="btn-outline">Register</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="index.html#registration" class="btn-outline">Book a Meeting</a></li>
             </ul>
             <button class="hamburger" type="button" aria-label="Open navigation" aria-expanded="false">
                 <span class="bar"></span>
@@ -139,37 +139,107 @@
                 <input type="hidden" id="selectedPackage" name="selectedPackage"
                     value="Retail & Service - Digital Storefront Package">
                 <p class="hidden"><label>Do not fill this out if you are human: <input name="bot-field"></label></p>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="fullName">Full Name</label>
-                        <input type="text" id="fullName" name="fullName" required>
+                <div class="application-step" data-application-step="details">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="businessName">Business Name</label>
+                            <input type="text" id="businessName" name="businessName" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="businessType">Type of Business</label>
+                            <select id="businessType" name="businessType" required>
+                                <option value="">Select one</option>
+                                <option value="Retail">Retail</option>
+                                <option value="Service">Service</option>
+                                <option value="Manufacturing">Manufacturing</option>
+                                <option value="Wholesale">Wholesale</option>
+                                <option value="Import export">Import export</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="businessAddress">Business Address</label>
+                            <input type="text" id="businessAddress" name="businessAddress" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Owner Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Owner Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="employees">Number of Employees</label>
+                            <select id="employees" name="employees" required>
+                                <option value="">Select one</option>
+                                <option value="1-5">1-5</option>
+                                <option value="6-15">6-15</option>
+                                <option value="16-50">16-50</option>
+                                <option value="51+">51+</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="locations">Physical Locations</label>
+                            <select id="locations" name="locations" required>
+                                <option value="">Select one</option>
+                                <option value="One store or office">One store or office</option>
+                                <option value="Multiple branches">Multiple branches</option>
+                                <option value="Online only">Online only</option>
+                                <option value="Warehouse or factory">Warehouse or factory</option>
+                            </select>
+                        </div>
                     </div>
                     <div class="form-group">
-                        <label for="businessName">Business Name</label>
-                        <input type="text" id="businessName" name="businessName" required>
+                        <label for="discoverySource">How did you hear about us?</label>
+                        <select id="discoverySource" name="discoverySource" required>
+                            <option value="">Select one</option>
+                            <option value="From people">From people</option>
+                            <option value="Search">Search</option>
+                            <option value="AI recommendation">AI recommendation</option>
+                            <option value="Social media">Social media</option>
+                            <option value="Other">Other</option>
+                        </select>
                     </div>
+                    <div class="form-group">
+                        <label for="goals">What do you want this system to help you achieve?</label>
+                        <textarea id="goals" name="goals" rows="4" required></textarea>
+                    </div>
+                    <button type="button" class="btn-primary full-width" data-show-agreement>Register - Let's Build</button>
                 </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
+
+                <div class="application-step hidden" data-application-step="agreement">
+                    <div class="agreement-box">
+                        <h3>Service Registration Agreement</h3>
+                        <p>This registration confirms your interest in starting a Sprintsales service package. After
+                            submission, our team reviews your information, confirms package fit, and contacts you before
+                            any payment, final timeline, or legal service agreement is activated.</p>
+                        <p>Project scope, delivery timeline, payment terms, responsibilities, and support conditions are
+                            finalized only after both sides review and approve the official service agreement.</p>
                     </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
+                    <label class="consent-row" for="agreementAccepted">
+                        <input type="checkbox" id="agreementAccepted" name="agreementAccepted" value="Agreed" required>
+                        <span>I have read this registration agreement and agree to continue.</span>
+                    </label>
+                    <button type="submit" class="btn-primary full-width">Finish Registration</button>
+                    <button type="button" class="btn-secondary full-width" data-back-to-application>Back to details</button>
                 </div>
-                <div class="form-group">
-                    <label for="goals">Tell us what you want to improve</label>
-                    <textarea id="goals" name="goals" rows="4" required></textarea>
-                </div>
-                <button type="submit" class="btn-primary full-width">Submit Registration</button>
                 <div class="form-message hidden"></div>
             </form>
         </div>
     </div>
 
-    <script src="script.js?v=6"></script>
+    <script src="script.js?v=7"></script>
 </body>
 
 </html>

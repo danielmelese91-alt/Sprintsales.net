@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Sprintsales</title>
-    <meta name="description" content="Learn about Sprintsales, our story, team, and portfolio direction.">
+    <meta name="description" content="Learn about Sprintsales, our story, team, and selected digital sales work.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500&display=swap"
         rel="stylesheet">
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" href="assets/sprintsales-favicon.png">
-    <link rel="apple-touch-icon" href="assets/sprintsales-favicon.png">
-    <link rel="stylesheet" href="style.css?v=7">
+    <link rel="icon" href="favicon.ico?v=12" sizes="any">
+    <link rel="icon" type="image/png" href="assets/sprintsales-favicon.png?v=12">
+    <link rel="apple-touch-icon" href="assets/sprintsales-favicon.png?v=12">
+    <link rel="stylesheet" href="style.css?v=12">
 </head>
 
 <body class="package-page">
@@ -23,10 +23,9 @@
             <a href="index.html" class="logo">SPRINT<span class="highlight">SALES</span></a>
             <ul class="nav-links">
                 <li><a href="index.html#hero">Home</a></li>
-                <li><a href="packages.html">Packages</a></li>
-                <li><a href="index.html#solutions">Process</a></li>
+                <li><a href="packages.html">Our services</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="index.html#registration" class="btn-outline">Book a Meeting</a></li>
+                <li><a href="index.html#registration" class="btn-outline">Book a free meeting</a></li>
             </ul>
             <button class="hamburger" type="button" aria-label="Open navigation" aria-expanded="false">
                 <span class="bar"></span>
@@ -41,10 +40,10 @@
             <div class="container package-hero-grid">
                 <div>
                     <p class="eyebrow">About Sprintsales</p>
-                    <h1>We Build the Sales Systems Businesses Wish They Had Earlier</h1>
-                    <p>Sprintsales started from a simple observation: many strong Ethiopian businesses have real
-                        products, real customers, and real ambition, but their digital presence does not yet support
-                        the way modern buyers discover and decide.</p>
+                    <h1 data-about-field="headline">We build the sales systems strong businesses need next.</h1>
+                    <p data-about-field="intro">Sprintsales started from a simple observation: many Ethiopian businesses
+                        already have good products, loyal customers, and real ambition, but their digital presence does
+                        not yet support the way modern buyers discover, compare, and decide.</p>
                 </div>
                 <div class="package-summary">
                     <div class="summary-card">
@@ -61,13 +60,14 @@
 
         <section class="package-detail-section">
             <div class="container">
-                <div class="story-grid">
+                <div class="story-grid" id="story">
                     <div>
                         <p class="eyebrow">Our story</p>
-                        <h2 class="section-title">From Marketing Ideas to Operating Systems</h2>
-                        <p class="section-subtitle">We are building Sprintsales as a practical growth partner: not just
-                            a design agency, not just a social media team, but a group that connects website, social
-                            commerce, customer service automation, and team training into one working system.</p>
+                        <h2 class="section-title" data-about-field="storyTitle">From marketing ideas to operating systems.</h2>
+                        <p class="section-subtitle" data-about-field="storyText">We are building Sprintsales as a
+                            practical growth partner: not just a design agency, not just a social media team, but a team
+                            that connects website, social commerce, customer service automation, and training into one
+                            working system.</p>
                     </div>
                     <div class="glass-card">
                         <h3>What we believe</h3>
@@ -80,31 +80,67 @@
                     </div>
                 </div>
 
-                <div class="team-grid">
-                    <div class="service-detail-card">
-                        <h3>Abel</h3>
-                        <p>Co-founder focused on strategy, client systems, and turning business goals into practical
-                            digital sales infrastructure.</p>
+                <section class="team-section" id="team">
+                    <div class="section-heading-row">
+                        <div>
+                            <p class="eyebrow">Team</p>
+                            <h2 class="section-title">The people building your system.</h2>
+                        </div>
+                        <p>Use this section to introduce the team with real photos, education, experience, and the role
+                            each person plays for clients.</p>
                     </div>
-                    <div class="service-detail-card">
-                        <h3>Mahlet</h3>
-                        <p>Co-founder focused on customer experience, brand presentation, and making each system clear
-                            enough for teams to manage after launch.</p>
+                    <div class="team-grid" data-team-list>
+                        <article class="team-card">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80"
+                                alt="Abel profile placeholder">
+                            <div>
+                                <span>Co-founder</span>
+                                <h3>Abel</h3>
+                                <p>Strategy and client systems lead focused on turning business goals into practical
+                                    digital sales infrastructure.</p>
+                                <small>Experience: Digital strategy, client operations, sales systems</small>
+                            </div>
+                        </article>
+                        <article class="team-card">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+                                alt="Mahlet profile placeholder">
+                            <div>
+                                <span>Co-founder</span>
+                                <h3>Mahlet</h3>
+                                <p>Customer experience and brand presentation lead focused on making each system clear
+                                    enough for teams to manage after launch.</p>
+                                <small>Experience: Customer experience, brand presentation, team enablement</small>
+                            </div>
+                        </article>
                     </div>
-                </div>
+                </section>
 
-                <div class="portfolio-panel">
-                    <p class="eyebrow">Portfolio</p>
-                    <h2>Our portfolio is being prepared.</h2>
-                    <p>We will use this section to show selected websites, social commerce setups, automation flows,
-                        and before/after examples as projects are approved for public display.</p>
-                    <a href="index.html#registration" class="btn-primary">Book a Meeting</a>
+                <div class="portfolio-panel" id="portfolio">
+                    <div>
+                        <p class="eyebrow">Portfolio</p>
+                        <h2>Selected work and project previews.</h2>
+                        <p data-portfolio-intro>We will use this section to show websites, social commerce setups,
+                            automation flows, and before/after examples as projects are approved for public display.</p>
+                    </div>
+                    <div class="portfolio-grid" data-portfolio-list>
+                        <article class="portfolio-card">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80"
+                                alt="Dashboard project placeholder">
+                            <div>
+                                <span>Digital sales system</span>
+                                <h3>Retail lead capture preview</h3>
+                                <p>A sample space for future public case studies, including the problem, solution, and
+                                    result.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <a href="index.html#registration" class="btn-primary">Book a free meeting</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <script src="script.js?v=7"></script>
+    <script src="script.js?v=12"></script>
 </body>
 
 </html>

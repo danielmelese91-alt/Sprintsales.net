@@ -4,18 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sprintsales | Your Digital Growth Partner</title>
+    <title>Sprintsales | Digital Sales Systems for Growing Businesses</title>
     <meta name="description"
-        content="Sprintsales helps businesses in Addis Ababa, Ethiopia grow their sales through powerful digital infrastructure and AI automated sales engines.">
+        content="Sprintsales builds websites, social selling systems, automation, and staff training for businesses in Addis Ababa, Ethiopia.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500&display=swap"
         rel="stylesheet">
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" href="assets/sprintsales-favicon.png">
-    <link rel="apple-touch-icon" href="assets/sprintsales-favicon.png">
-    <link rel="stylesheet" href="style.css?v=7">
+    <link rel="icon" href="favicon.ico?v=12" sizes="any">
+    <link rel="icon" type="image/png" href="assets/sprintsales-favicon.png?v=12">
+    <link rel="apple-touch-icon" href="assets/sprintsales-favicon.png?v=12">
+    <link rel="stylesheet" href="style.css?v=12">
 </head>
 
 <body>
@@ -48,6 +48,8 @@
             <input name="phone">
             <input name="employees">
             <input name="locations">
+            <input name="currentChannels">
+            <input name="startTimeline">
             <input name="discoverySource">
             <textarea name="goals"></textarea>
             <input name="agreementAccepted">
@@ -60,11 +62,9 @@
             <a href="#" class="logo">SPRINT<span class="highlight">SALES</span></a>
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
-                <li><a href="packages.html">Packages</a></li>
-                <li><a href="#solutions">Process</a></li>
+                <li><a href="packages.html">Our services</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="#registration">Free Meeting</a></li>
-                <li><a href="#registration" class="btn-outline">Book a Meeting</a></li>
+                <li><a href="#registration" class="btn-outline">Book a free meeting</a></li>
             </ul>
             <button class="hamburger" type="button" aria-label="Open navigation" aria-expanded="false">
                 <span class="bar"></span>
@@ -76,29 +76,78 @@
 
     <!-- Hero Section -->
     <header class="hero" id="hero">
-        <div class="glow-orb orb-1"></div>
-        <div class="glow-orb orb-2"></div>
-        <div class="container hero-content">
-            <p class="eyebrow">Addis Ababa growth agency</p>
-            <h1 class="hero-title">We Build <span class="highlight-gradient">Digital Sales</span> Infrastructure.</h1>
-            <p class="hero-subtitle">Based in Addis Ababa, Ethiopia. We empower businesses to scale through AI,
-                multi-channel automation, and premium digital showrooms.</p>
-            <div class="hero-cta">
-                <a href="#registration" class="btn-primary">Book a Free Meeting</a>
-                <a href="packages.html" class="btn-secondary">Explore Packages</a>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <p class="eyebrow">Addis Ababa growth agency</p>
+                <h1 class="hero-title">Digital sales systems for businesses ready to grow.</h1>
+                <p class="hero-subtitle">We build the website, social selling setup, automation, and handover training
+                    your team needs to turn attention into serious customer conversations.</p>
+                <div class="hero-cta">
+                    <a href="#registration" class="btn-primary">Book a free meeting</a>
+                    <a href="about.html#portfolio" class="btn-secondary">View our work</a>
+                </div>
+                <div class="hero-metrics" aria-label="Sprintsales highlights">
+                    <div>
+                        <strong>30 Days</strong>
+                        <span>Build and handover sprint</span>
+                    </div>
+                    <div>
+                        <strong>3 Offers</strong>
+                        <span>Matched to how you sell</span>
+                    </div>
+                    <div>
+                        <strong>100%</strong>
+                        <span>Client-owned systems</span>
+                    </div>
+                </div>
             </div>
-            <div class="hero-metrics" aria-label="Sprintsales highlights">
-                <div>
-                    <strong>30 Days</strong>
-                    <span>Strategy to handover</span>
+            <div class="hero-showcase" aria-label="Sprintsales team and work preview">
+                <div class="hero-slide is-active">
+                    <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1200&q=80"
+                        alt="Marketing team planning a client growth system">
+                    <div class="hero-slide-caption">
+                        <span>Team sprint</span>
+                        <strong>Strategy, build, train, hand over.</strong>
+                    </div>
                 </div>
-                <div>
-                    <strong>24/7</strong>
-                    <span>Lead capture systems</span>
+                <div class="hero-slide">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80"
+                        alt="Team reviewing a digital project">
+                    <div class="hero-slide-caption">
+                        <span>Digital showroom</span>
+                        <strong>Websites that support sales conversations.</strong>
+                    </div>
                 </div>
-                <div>
-                    <strong>100%</strong>
-                    <span>Client ownership</span>
+                <div class="hero-slide">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
+                        alt="Analytics dashboard for business growth">
+                    <div class="hero-slide-caption">
+                        <span>Sales visibility</span>
+                        <strong>Lead capture and reporting made practical.</strong>
+                    </div>
+                </div>
+                <div class="hero-slide">
+                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80"
+                        alt="Modern office setup for client work">
+                    <div class="hero-slide-caption">
+                        <span>Client systems</span>
+                        <strong>Automation that supports real teams.</strong>
+                    </div>
+                </div>
+                <div class="hero-slide">
+                    <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1200&q=80"
+                        alt="Business team discussing a project">
+                    <div class="hero-slide-caption">
+                        <span>Portfolio preview</span>
+                        <strong>Work samples will live here as we publish them.</strong>
+                    </div>
+                </div>
+                <div class="hero-slide-controls" aria-hidden="true">
+                    <span class="is-active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </div>
@@ -109,41 +158,41 @@
         <div class="container">
             <div class="blueprint-content">
                 <div class="blueprint-text">
-                    <h2 class="section-title">The 30-Day Digital Transformation</h2>
-                    <p>A focused sprint to build, automate, and hand over the right sales system for your sector.
-                        Packages start at <strong>60,000 birr</strong>.</p>
+                    <h2 class="section-title">A clear 30-day build, not an endless marketing experiment.</h2>
+                    <p>We map the sales journey, build the core digital system, automate key responses, and train your
+                        team to manage it. Services start at <strong>60,000 birr</strong>.</p>
 
                     <div class="timeline">
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
-                                <h4>Week 1: The Strategy</h4>
-                                <p>We map out exactly how to find your best buyers and establish your competitive
-                                    positioning.</p>
+                                <h4>Week 1: Strategy and positioning</h4>
+                                <p>We define your ideal customers, sales message, offer structure, and the system your
+                                    business actually needs.</p>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
-                                <h4>Week 2: The Digital Shop</h4>
-                                <p>Development of a fast, sales-focused website and professional digital infrastructure.
-                                </p>
+                                <h4>Week 2: Website and sales foundation</h4>
+                                <p>We build a focused digital home for your business with clear pages, trust signals,
+                                    and customer action points.</p>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
-                                <h4>Week 3: The Sales Engine</h4>
-                                <p>Integration of social selling channels, customer service automation, and lead capture
-                                    flows matched to your package.</p>
+                                <h4>Week 3: Automation and social selling</h4>
+                                <p>We connect the channels that matter, prepare response flows, and make it easier to
+                                    capture leads from customer interest.</p>
                             </div>
                         </div>
                         <div class="timeline-item">
                             <div class="timeline-dot glow-dot"></div>
                             <div class="timeline-content">
-                                <h4>Week 4: The Handover</h4>
-                                <p>Dedicated knowledge transfer and practical handover training so your team can manage
-                                    the system smoothly.</p>
+                                <h4>Week 4: Training and handover</h4>
+                                <p>Your team receives practical training, templates, and operating guidance so the
+                                    system remains useful after launch.</p>
                             </div>
                         </div>
                     </div>
@@ -166,9 +215,7 @@
                                 <span class="sys-label">Lead Capture:</span> <span class="sys-value">24/7 STANDBY</span>
                             </div>
                         </div>
-                        <div class="cyber-footer">
-                            OWNERSHIP: 100% CLIENT
-                        </div>
+                        <div class="cyber-footer">Built to be owned and managed by your team.</div>
                     </div>
                 </div>
             </div>
@@ -180,36 +227,35 @@
         <div class="container">
             <div class="registration-layout">
                 <div class="registration-copy">
-                    <p class="eyebrow">Client registration</p>
-                    <h2 class="section-title">Book a Free Strategy Meeting</h2>
-                    <p class="section-subtitle">Tell us where your business is now and choose a preferred meeting time.
-                        We will confirm availability, then use the call to explain our services and where Sprintsales
-                        may help your business grow.
-                    </p>
+                    <p class="eyebrow">Free consultation</p>
+                    <h2 class="section-title">Book a free strategy meeting.</h2>
+                    <p class="section-subtitle">Tell us about your business and choose a preferred time. We will
+                        confirm availability, then use the meeting to understand your goals and recommend the right next
+                        step.</p>
 
                     <div class="registration-proof">
                         <div>
                             <span>01</span>
-                            <strong>Submit your meeting request</strong>
-                            <p>Share your company, contact details, business type, and preferred meeting time.</p>
+                            <strong>Send the essentials</strong>
+                            <p>Share your contact details, business type, location, and the challenge you want to solve.</p>
                         </div>
                         <div>
                             <span>02</span>
-                            <strong>We confirm the time</strong>
-                            <p>If your preferred slot is already booked, we will suggest the closest available option.</p>
+                            <strong>We confirm availability</strong>
+                            <p>If your preferred slot is taken, we will suggest the closest available time.</p>
                         </div>
                         <div>
                             <span>03</span>
-                            <strong>Free discovery meeting</strong>
-                            <p>You will understand our packages, possible benefits, and the best next step for you.</p>
+                            <strong>Get a useful recommendation</strong>
+                            <p>You will leave with a clearer view of what to build, what to avoid, and how we can help.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="contact-card glass-card">
-                    <h3>Free Meeting Request</h3>
-                    <p class="form-intro">Book a free conversation with us. This is not a paid registration; it is a
-                        chance to understand our services and how working together may benefit your business.</p>
+                    <h3>Request your meeting</h3>
+                    <p class="form-intro">This is a free consultation, not a paid registration. We will review your
+                        answers before the call so the conversation is practical from the first minute.</p>
 
                     <form id="leadForm" name="meeting-booking" class="contact-form" method="POST"
                         action="/thank-you.html" data-netlify="true" netlify data-netlify-honeypot="bot-field">
@@ -227,7 +273,7 @@
                             <div class="form-group">
                                 <label for="businessName">Business Name</label>
                                 <input type="text" id="businessName" name="businessName"
-                                    placeholder="e.g. Sprintsales Corp" required>
+                                    placeholder="e.g. Sprintsales" required>
                             </div>
                         </div>
 
@@ -277,7 +323,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="budget">Project Budget</label>
+                                <label for="budget">Service Interest</label>
                                 <select id="budget" name="budget" required>
                                     <option value="">Select one</option>
                                     <option value="60,000 birr Retail and Service">60,000 birr Retail and Service</option>
@@ -306,8 +352,8 @@
                             <span>I agree to be contacted by Sprintsales about this free meeting request.</span>
                         </label>
 
-                        <p class="form-note">Your selected time is a preference, not an automatic calendar booking. We
-                            confirm the final meeting time with you to avoid double-booking.</p>
+                        <p class="form-note">Your selected time is a preference. We confirm the final meeting time
+                            directly with you so there is no double-booking.</p>
 
                         <button type="submit" class="btn-primary full-width">Book My Free Meeting</button>
                         <div id="formMessage" class="form-message hidden">Thank you. Your registration is ready to
@@ -321,10 +367,9 @@
     <section class="about" id="about">
         <div class="container">
             <p class="eyebrow">About us</p>
-            <h2 class="section-title">A Small Team Building Practical Sales Systems</h2>
-            <p class="section-subtitle">Sprintsales helps Ethiopian businesses turn websites, social channels, and
-                automation into a clearer customer journey. We focus on systems your team can actually understand,
-                manage, and improve after launch.</p>
+            <h2 class="section-title">Practical systems, built with ownership in mind.</h2>
+            <p class="section-subtitle">Sprintsales helps Ethiopian businesses turn scattered digital activity into a
+                customer journey their teams can understand, manage, and improve.</p>
         </div>
     </section>
 
@@ -343,7 +388,7 @@
         </div>
     </footer>
 
-    <script src="script.js?v=7"></script>
+    <script src="script.js?v=12"></script>
 </body>
 
 </html>

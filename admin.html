@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprintsales Admin</title>
+    <meta name="description" content="Local Sprintsales admin preview for hero slides and captured form requests.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="favicon.ico?v=12" sizes="any">
+    <link rel="icon" type="image/png" href="assets/sprintsales-favicon.png?v=12">
+    <link rel="apple-touch-icon" href="assets/sprintsales-favicon.png?v=12">
+    <link rel="stylesheet" href="style.css?v=12">
+</head>
+
+<body class="package-page admin-page">
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">SPRINT<span class="highlight">SALES</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="packages.html">Our services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="index.html#registration" class="btn-outline">Book a free meeting</a></li>
+            </ul>
+            <button class="hamburger" type="button" aria-label="Open navigation" aria-expanded="false">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </nav>
+
+    <main data-admin-app class="admin-locked">
+        <section class="admin-lock" data-admin-lock>
+            <div class="glass-card admin-lock-card">
+                <p class="eyebrow">Secure admin</p>
+                <h1>Sprintsales control room</h1>
+                <p>Create an admin passcode for this browser, or enter the existing one to continue. This protects the
+                    local preview, but production should still use server-side authentication.</p>
+                <form id="adminAuthForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="adminPasscode">Admin passcode</label>
+                        <input type="password" id="adminPasscode" name="adminPasscode" minlength="8" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Unlock admin</button>
+                    <div class="form-message hidden" id="adminAuthMessage"></div>
+                </form>
+            </div>
+        </section>
+
+        <section class="package-hero">
+            <div class="container package-hero-grid">
+                <div>
+                    <p class="eyebrow">Admin preview</p>
+                    <h1>Manage content, portfolio, and client requests.</h1>
+                    <p>This admin preview lets you control hero slides, About text, team profiles, portfolio items, and
+                        locally captured form requests. It is intentionally hidden from navigation.</p>
+                </div>
+                <div class="package-summary">
+                    <div class="summary-card">
+                        <span>Hero slides</span>
+                        <strong>Up to 5</strong>
+                    </div>
+                    <div class="summary-card">
+                        <span>Requests</span>
+                        <strong>Local browser records</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="package-detail-section admin-section">
+            <div class="container admin-layout">
+                <div class="glass-card admin-panel">
+                    <div class="admin-panel-header">
+                        <div>
+                            <p class="eyebrow">Hero content</p>
+                            <h2>Slides</h2>
+                        </div>
+                        <button type="button" class="btn-secondary" data-reset-slides>Reset samples</button>
+                    </div>
+                    <form id="heroSlidesForm" class="admin-form"></form>
+                </div>
+
+                <div class="glass-card admin-panel">
+                    <div class="admin-panel-header">
+                        <div>
+                            <p class="eyebrow">About page</p>
+                            <h2>Story and positioning</h2>
+                        </div>
+                    </div>
+                    <form id="aboutContentForm" class="admin-form"></form>
+                </div>
+
+                <div class="glass-card admin-panel">
+                    <div class="admin-panel-header">
+                        <div>
+                            <p class="eyebrow">Staff profiles</p>
+                            <h2>Team</h2>
+                        </div>
+                        <button type="button" class="btn-secondary" data-reset-team>Reset team</button>
+                    </div>
+                    <form id="teamContentForm" class="admin-form"></form>
+                </div>
+
+                <div class="glass-card admin-panel">
+                    <div class="admin-panel-header">
+                        <div>
+                            <p class="eyebrow">Portfolio</p>
+                            <h2>Work posts</h2>
+                        </div>
+                        <button type="button" class="btn-secondary" data-reset-portfolio>Reset portfolio</button>
+                    </div>
+                    <form id="portfolioContentForm" class="admin-form"></form>
+                </div>
+
+                <div class="glass-card admin-panel">
+                    <div class="admin-panel-header">
+                        <div>
+                            <p class="eyebrow">Client requests</p>
+                            <h2>Meetings and service applications</h2>
+                        </div>
+                        <button type="button" class="btn-secondary" data-clear-submissions>Clear local records</button>
+                    </div>
+                    <div id="adminSubmissions" class="admin-submissions"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js?v=12"></script>
+</body>
+
+</html>

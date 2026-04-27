@@ -8,7 +8,7 @@ const heroSlidesKey = 'sprintsalesHeroSlides';
 const aboutContentKey = 'sprintsalesAboutContent';
 const teamContentKey = 'sprintsalesTeamContent';
 const portfolioContentKey = 'sprintsalesPortfolioContent';
-const adminPassKey = 'sprintsalesAdminPassHash';
+const adminCredentialHash = '985ea6da09ca9412c7af3ae6ba0283ab34a63efd34d54275c9db8e1a1d87b48d';
 
 const defaultHeroSlides = [
     {
@@ -555,17 +555,17 @@ if (adminApp) {
     const clearSubmissionsButton = document.querySelector('[data-clear-submissions]');
     let adminUnlocked = false;
 
-    const hashPasscode = async passcode => {
+    const hashCredential = async credential => {
         if (!crypto?.subtle) {
             let hash = 0;
-            for (let index = 0; index < passcode.length; index += 1) {
-                hash = ((hash << 5) - hash) + passcode.charCodeAt(index);
+            for (let index = 0; index < credential.length; index += 1) {
+                hash = ((hash << 5) - hash) + credential.charCodeAt(index);
                 hash |= 0;
             }
             return `fallback-${hash}`;
         }
 
-        const encoded = new TextEncoder().encode(passcode);
+        const encoded = new TextEncoder().encode(credential);
         const digest = await crypto.subtle.digest('SHA-256', encoded);
         return Array.from(new Uint8Array(digest)).map(byte => byte.toString(16).padStart(2, '0')).join('');
     };
@@ -579,21 +579,14 @@ if (adminApp) {
 
     authForm?.addEventListener('submit', async event => {
         event.preventDefault();
+        const email = authForm.adminEmail.value.trim().toLowerCase();
         const passcode = authForm.adminPasscode.value;
-        const passHash = await hashPasscode(passcode);
-        const existingHash = localStorage.getItem(adminPassKey);
+        const passHash = await hashCredential(`${email}:${passcode}`);
 
-        if (!existingHash) {
-            localStorage.setItem(adminPassKey, passHash);
-            unlockAdmin();
-            showSuccessPopup('Admin passcode created for this browser. Keep it private.');
-            return;
-        }
-
-        if (passHash === existingHash) {
+        if (passHash === adminCredentialHash) {
             unlockAdmin();
         } else if (authMessage) {
-            authMessage.innerText = 'Incorrect passcode.';
+            authMessage.innerText = 'Incorrect admin email or password.';
             authMessage.classList.remove('hidden');
         }
     });

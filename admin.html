@@ -12,10 +12,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500&display=swap"
         rel="stylesheet">
-    <link rel="icon" href="favicon.ico?v=12" sizes="any">
-    <link rel="icon" type="image/png" href="assets/sprintsales-favicon.png?v=12">
-    <link rel="apple-touch-icon" href="assets/sprintsales-favicon.png?v=12">
-    <link rel="stylesheet" href="style.css?v=12">
+    <link rel="icon" href="favicon.ico?v=13" sizes="any">
+    <link rel="icon" type="image/png" href="assets/sprintsales-favicon.png?v=13">
+    <link rel="apple-touch-icon" href="assets/sprintsales-favicon.png?v=13">
+    <link rel="stylesheet" href="style.css?v=13">
 </head>
 
 <body class="package-page admin-page">
@@ -41,12 +41,18 @@
             <div class="glass-card admin-lock-card">
                 <p class="eyebrow">Secure admin</p>
                 <h1>Sprintsales control room</h1>
-                <p>Create an admin passcode for this browser, or enter the existing one to continue. This protects the
-                    local preview, but production should still use server-side authentication.</p>
+                <p>Enter the approved Sprintsales admin email and password to continue. This is basic static-site
+                    protection; production should still move to server-side authentication once client data becomes
+                    sensitive.</p>
                 <form id="adminAuthForm" class="contact-form">
                     <div class="form-group">
+                        <label for="adminEmail">Admin email</label>
+                        <input type="email" id="adminEmail" name="adminEmail" autocomplete="username" required>
+                    </div>
+                    <div class="form-group">
                         <label for="adminPasscode">Admin passcode</label>
-                        <input type="password" id="adminPasscode" name="adminPasscode" minlength="8" required>
+                        <input type="password" id="adminPasscode" name="adminPasscode"
+                            autocomplete="current-password" required>
                     </div>
                     <button type="submit" class="btn-primary">Unlock admin</button>
                     <div class="form-message hidden" id="adminAuthMessage"></div>
@@ -134,7 +140,7 @@
         </section>
     </main>
 
-    <script src="script.js?v=12"></script>
+    <script src="script.js?v=13"></script>
 </body>
 
 </html>

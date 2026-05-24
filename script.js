@@ -192,6 +192,23 @@ if (hamburger && navLinks) {
     });
 }
 
+const pricingTabs = document.querySelectorAll('[data-pricing-tab]');
+const pricingPanels = document.querySelectorAll('[data-pricing-panel]');
+
+pricingTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const target = tab.dataset.pricingTab;
+        pricingTabs.forEach(item => {
+            const isActive = item === tab;
+            item.classList.toggle('active', isActive);
+            item.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+        pricingPanels.forEach(panel => {
+            panel.classList.toggle('active', panel.dataset.pricingPanel === target);
+        });
+    });
+});
+
 const getStoredSlides = () => {
     return getStoredArray(heroSlidesKey, defaultHeroSlides, 5);
 };

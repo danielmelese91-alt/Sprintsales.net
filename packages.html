@@ -5,20 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services | Sprintsales</title>
-    <meta name="description" content="Sprintsales service packages for retail, service, enterprise, and import export businesses.">
+    <meta name="description"
+        content="Subscription-based digital sales, Telegram commerce, e-commerce, Meta Ads, B2B, enterprise, and standalone web development services from Sprintsales.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@300;400;500&display=swap"
         rel="stylesheet">
-    <link rel="icon" href="favicon.ico?v=14" sizes="any">
-    <link rel="icon" type="image/png" href="assets/sprintsales-favicon.png?v=14">
-    <link rel="apple-touch-icon" href="assets/sprintsales-favicon.png?v=14">
-    <link rel="stylesheet" href="style.css?v=14">
+    <link rel="icon" href="favicon.ico?v=15" sizes="any">
+    <link rel="icon" type="image/png" href="assets/sprintsales-favicon.png?v=15">
+    <link rel="apple-touch-icon" href="assets/sprintsales-favicon.png?v=15">
+    <link rel="stylesheet" href="style.css?v=15">
 </head>
 
-<body class="package-page">
-    <nav class="navbar" id="navbar">
+<body class="package-page pricing-page">
+    <nav class="navbar pricing-navbar" id="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo">SPRINT<span class="highlight">SALES</span></a>
             <ul class="nav-links">
@@ -36,91 +37,280 @@
     </nav>
 
     <main>
-        <section class="package-hero">
-            <div class="container package-hero-grid">
+        <section class="pricing-hero">
+            <div class="container pricing-hero-grid">
                 <div>
-                    <p class="eyebrow">Our services</p>
-                    <h1>Choose the service model that fits how your business sells.</h1>
-                    <p>Retail shops, service providers, manufacturers, wholesalers, and trade companies need different
-                        sales systems. Start with the closest package, then book a free meeting if you want us to help
-                        you choose.</p>
-                </div>
-                <div class="package-summary">
-                    <div class="summary-card">
-                        <span>Starting from</span>
-                        <strong>60,000 birr</strong>
+                    <p class="pricing-eyebrow">Our services</p>
+                    <h1>Digital sales infrastructure, now built as a subscription growth system.</h1>
+                    <p>Choose the service lane that matches how you sell. Retailers can start lean with Telegram
+                        commerce, wholesalers can scale B2B inquiries, enterprise teams can outsource the full digital
+                        sales operation, and businesses that only need a website can still get a clean 30-day build.</p>
+                    <div class="pricing-hero-actions">
+                        <a href="index.html#registration" class="pricing-primary">Book a consult</a>
+                        <a href="#pricing-tabs" class="pricing-secondary">Compare packages</a>
                     </div>
-                    <div class="summary-card">
-                        <span>Delivery style</span>
-                        <strong>Build, automate, train</strong>
+                </div>
+                <div class="pricing-orbit" aria-hidden="true">
+                    <div class="orbit-card">
+                        <span>Subscriptions from</span>
+                        <strong>3,000 ETB/mo</strong>
+                    </div>
+                    <div class="orbit-card">
+                        <span>Web builds from</span>
+                        <strong>25,000 ETB</strong>
+                    </div>
+                    <div class="orbit-card">
+                        <span>Core channels</span>
+                        <strong>Telegram + Web + Meta</strong>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="divisions compact-packages" id="packages">
+        <section class="pricing-section" id="pricing-tabs">
             <div class="container">
-                <div class="card-grid package-grid">
-                    <div class="glass-card offering-card">
-                        <div class="package-topline">
-                            <div class="card-icon">RS</div>
-                            <span class="package-fit">Retail & Service</span>
-                        </div>
-                        <h3>Digital Storefront</h3>
-                        <p class="package-audience">Built for retail and service businesses.</p>
-                        <p>For customer-facing businesses that need a professional online presence, social selling
-                            setup, and faster response to inquiries.</p>
-                        <div class="price-tag">60,000 birr</div>
-                        <ul class="card-list">
-                            <li>Sales-focused website or booking hub</li>
-                            <li>Instagram Shop and Telegram sales setup</li>
-                            <li>Customer service automation for DMs and FAQs</li>
-                            <li>Training so your team can manage the system smoothly</li>
-                        </ul>
-                        <a href="retail-service.html" class="btn-secondary package-link">View details</a>
-                    </div>
+                <div class="pricing-tabs" role="tablist" aria-label="Service segments">
+                    <button class="pricing-tab active" type="button" role="tab" aria-selected="true"
+                        data-pricing-tab="retail">For Retailers</button>
+                    <button class="pricing-tab" type="button" role="tab" aria-selected="false"
+                        data-pricing-tab="wholesale">Wholesalers & B2B</button>
+                    <button class="pricing-tab" type="button" role="tab" aria-selected="false"
+                        data-pricing-tab="enterprise">Enterprise</button>
+                    <button class="pricing-tab" type="button" role="tab" aria-selected="false"
+                        data-pricing-tab="web">Standalone Web Dev</button>
+                </div>
 
-                    <div class="glass-card offering-card active-card">
-                        <div class="package-topline">
-                            <div class="card-icon">EN</div>
-                            <span class="package-fit">Enterprise</span>
+                <div class="pricing-panel active" data-pricing-panel="retail">
+                    <article class="pricing-card">
+                        <div class="pricing-card-top">
+                            <span class="segment-pill">Starter</span>
+                            <h2>Telegram Lite</h2>
+                            <p>Best for micro-retailers testing the market.</p>
                         </div>
-                        <h3>Enterprise Scale</h3>
-                        <p>For manufacturers, producers, and wholesalers that need stronger B2B positioning, cleaner
-                            lead capture, and staff who can run the system.</p>
-                        <div class="price-tag">150,000 birr</div>
-                        <ul class="card-list">
-                            <li>Everything in Retail & Service</li>
-                            <li>Premium B2B website and CRM-ready lead capture</li>
-                            <li>Market intelligence and positioning support</li>
-                            <li>Omnichannel automation and dedicated staff training</li>
+                        <div class="pricing-price"><strong>3,000</strong><span>ETB/month</span></div>
+                        <ul class="pricing-features">
+                            <li>Basic Telegram e-commerce shop setup</li>
+                            <li>Basic automated bot</li>
+                            <li>0 ETB setup fee</li>
                         </ul>
-                        <a href="enterprise.html" class="btn-secondary package-link">View details</a>
-                    </div>
+                        <a href="index.html#registration" class="pricing-card-cta">Get started</a>
+                    </article>
 
-                    <div class="glass-card offering-card">
-                        <div class="package-topline">
-                            <div class="card-icon">TR</div>
-                            <span class="package-fit">Import Export</span>
+                    <article class="pricing-card">
+                        <div class="pricing-card-top">
+                            <span class="segment-pill">Automation</span>
+                            <h2>Telegram Pro</h2>
+                            <p>Best for busy shops that need automated selling support.</p>
                         </div>
-                        <h3>Trade Automation System</h3>
-                        <p>For importers, exporters, and distributors that need clear catalogs, faster inquiry handling,
-                            and better visibility around stock and buyer requests.</p>
-                        <div class="price-tag">99,000 birr</div>
-                        <ul class="card-list">
-                            <li>Everything in Retail & Service</li>
-                            <li>Smart inventory and stock visibility setup</li>
-                            <li>B2B-ready digital catalog structure</li>
-                            <li>WhatsApp and social inquiry automation</li>
+                        <div class="pricing-price"><strong>6,000</strong><span>ETB/month</span></div>
+                        <ul class="pricing-features">
+                            <li>Advanced Sales Automation Pro</li>
+                            <li>Broadcast marketing tools</li>
+                            <li>Automated FAQs</li>
+                            <li>0 ETB setup fee</li>
                         </ul>
-                        <a href="import-export.html" class="btn-secondary package-link">View details</a>
-                    </div>
+                        <a href="index.html#registration" class="pricing-card-cta">Get started</a>
+                    </article>
+
+                    <article class="pricing-card popular">
+                        <div class="popular-tag">Most Popular</div>
+                        <div class="pricing-card-top">
+                            <span class="segment-pill">Growth</span>
+                            <h2>Growth Engine</h2>
+                            <p>Best for brands that want a real web presence.</p>
+                        </div>
+                        <div class="pricing-price"><strong>12,000</strong><span>ETB/month</span></div>
+                        <ul class="pricing-features">
+                            <li>Full e-commerce website</li>
+                            <li>Telegram Automation Pro</li>
+                            <li>15,000 ETB setup fee waived with 3-month contract</li>
+                        </ul>
+                        <a href="index.html#registration" class="pricing-card-cta">Book a consult</a>
+                    </article>
+
+                    <article class="pricing-card">
+                        <div class="pricing-card-top">
+                            <span class="segment-pill">Funnel</span>
+                            <h2>Scale Accelerator</h2>
+                            <p>Best for shops ready to flood their funnel.</p>
+                        </div>
+                        <div class="pricing-price"><strong>20,000</strong><span>ETB/month</span></div>
+                        <ul class="pricing-features">
+                            <li>Telegram Pro</li>
+                            <li>E-commerce site</li>
+                            <li>Meta Ads Management</li>
+                            <li>15,000 ETB setup fee waived with 3-month contract</li>
+                            <li>Ad spend excluded</li>
+                        </ul>
+                        <a href="index.html#registration" class="pricing-card-cta">Get started</a>
+                    </article>
+
+                    <article class="pricing-card">
+                        <div class="pricing-card-top">
+                            <span class="segment-pill">Omnichannel</span>
+                            <h2>Retail Omnichannel</h2>
+                            <p>Best for established retail brands with serious digital sales goals.</p>
+                        </div>
+                        <div class="pricing-price"><strong>30,000</strong><span>ETB/month</span></div>
+                        <ul class="pricing-features">
+                            <li>Telegram Pro</li>
+                            <li>E-commerce site</li>
+                            <li>Meta Ads Management</li>
+                            <li>Dedicated Digital Sales Support</li>
+                            <li>Requires 3-month contract, setup fee waived</li>
+                            <li>Ad spend excluded</li>
+                        </ul>
+                        <a href="index.html#registration" class="pricing-card-cta">Book a consult</a>
+                    </article>
+                </div>
+
+                <div class="pricing-panel" data-pricing-panel="wholesale">
+                    <article class="pricing-card popular">
+                        <div class="popular-tag">B2B Growth</div>
+                        <div class="pricing-card-top">
+                            <span class="segment-pill">Wholesale</span>
+                            <h2>B2B Scale Engine</h2>
+                            <p>Best for bulk merchants scaling up.</p>
+                        </div>
+                        <div class="pricing-price"><strong>30,000</strong><span>ETB/month</span></div>
+                        <ul class="pricing-features">
+                            <li>Telegram Pro</li>
+                            <li>E-commerce site</li>
+                            <li>Meta Ads Management</li>
+                            <li>15,000 ETB setup fee or 3-month contract</li>
+                            <li>Ad spend excluded</li>
+                        </ul>
+                        <a href="index.html#registration" class="pricing-card-cta">Book a consult</a>
+                    </article>
+
+                    <article class="pricing-card">
+                        <div class="pricing-card-top">
+                            <span class="segment-pill">High Volume</span>
+                            <h2>B2B Market Leader</h2>
+                            <p>Best for high-volume wholesale and logistics teams.</p>
+                        </div>
+                        <div class="pricing-price"><strong>40,000</strong><span>ETB/month</span></div>
+                        <ul class="pricing-features">
+                            <li>Everything in B2B Scale Engine</li>
+                            <li>Dedicated Digital Sales Support</li>
+                            <li>Wholesale inquiry handling structure</li>
+                            <li>Requires 3-month contract, setup fee waived</li>
+                            <li>Ad spend excluded</li>
+                        </ul>
+                        <a href="index.html#registration" class="pricing-card-cta">Get started</a>
+                    </article>
+                </div>
+
+                <div class="pricing-panel" data-pricing-panel="enterprise">
+                    <article class="pricing-card">
+                        <div class="pricing-card-top">
+                            <span class="segment-pill">Core</span>
+                            <h2>Enterprise Core</h2>
+                            <p>Full digital transformation for serious operators.</p>
+                        </div>
+                        <div class="pricing-price"><strong>50,000</strong><span>ETB/month</span></div>
+                        <ul class="pricing-features">
+                            <li>E-commerce website</li>
+                            <li>Advanced Sales Automation</li>
+                            <li>Meta Ads Management</li>
+                            <li>Digital Sales Support</li>
+                            <li>Minimum 3-month contract, setup fee waived</li>
+                        </ul>
+                        <a href="index.html#registration" class="pricing-card-cta">Book a consult</a>
+                    </article>
+
+                    <article class="pricing-card popular">
+                        <div class="popular-tag">Elite</div>
+                        <div class="pricing-card-top">
+                            <span class="segment-pill">Market Push</span>
+                            <h2>Enterprise Elite</h2>
+                            <p>Total market execution with creative production included.</p>
+                        </div>
+                        <div class="pricing-price"><strong>70,000</strong><span>ETB/month</span></div>
+                        <ul class="pricing-features">
+                            <li>Everything in Enterprise Core</li>
+                            <li>Professional ad video production</li>
+                            <li>Shooting and editing support</li>
+                            <li>Minimum 3-month contract, setup fee waived</li>
+                        </ul>
+                        <a href="index.html#registration" class="pricing-card-cta">Get started</a>
+                    </article>
+
+                    <article class="pricing-card">
+                        <div class="pricing-card-top">
+                            <span class="segment-pill">Partnership</span>
+                            <h2>Full Partnership</h2>
+                            <p>For businesses considering equity or revenue-share growth partnerships.</p>
+                        </div>
+                        <div class="pricing-price custom"><strong>Custom</strong><span>Negotiation</span></div>
+                        <ul class="pricing-features">
+                            <li>Full agency immersion</li>
+                            <li>Performance-based scaling</li>
+                            <li>Custom integrations</li>
+                            <li>Equity and revenue-share structure</li>
+                        </ul>
+                        <a href="index.html#registration" class="pricing-card-cta">Book a consult</a>
+                    </article>
+                </div>
+
+                <div class="pricing-panel" data-pricing-panel="web">
+                    <article class="pricing-card">
+                        <div class="pricing-card-top">
+                            <span class="segment-pill">One-time</span>
+                            <h2>Simple Blog / Landing Page</h2>
+                            <p>Best for a clean, fast online presence.</p>
+                        </div>
+                        <div class="pricing-price"><strong>25,000</strong><span>ETB one-time</span></div>
+                        <ul class="pricing-features">
+                            <li>Focused landing page or blog structure</li>
+                            <li>Mobile-responsive build</li>
+                            <li>Basic contact flow</li>
+                        </ul>
+                        <a href="index.html#registration" class="pricing-card-cta">Get started</a>
+                    </article>
+
+                    <article class="pricing-card">
+                        <div class="pricing-card-top">
+                            <span class="segment-pill">Service</span>
+                            <h2>Booking / Service Site</h2>
+                            <p>Best for consultants, clinics, salons, restaurants, and local service providers.</p>
+                        </div>
+                        <div class="pricing-price"><strong>50,000</strong><span>ETB one-time</span></div>
+                        <ul class="pricing-features">
+                            <li>Service pages and booking/contact flow</li>
+                            <li>Trust-focused content structure</li>
+                            <li>30-day delivery target</li>
+                        </ul>
+                        <a href="index.html#registration" class="pricing-card-cta">Book a consult</a>
+                    </article>
+
+                    <article class="pricing-card popular">
+                        <div class="popular-tag">Commerce</div>
+                        <div class="pricing-card-top">
+                            <span class="segment-pill">E-commerce</span>
+                            <h2>Full E-commerce Website</h2>
+                            <p>Best for businesses that need a proper digital storefront.</p>
+                        </div>
+                        <div class="pricing-price"><strong>60,000</strong><span>ETB one-time</span></div>
+                        <ul class="pricing-features">
+                            <li>Product catalog and sales-focused pages</li>
+                            <li>Checkout or inquiry flow setup</li>
+                            <li>30-day delivery target</li>
+                        </ul>
+                        <a href="index.html#registration" class="pricing-card-cta">Get started</a>
+                    </article>
+                </div>
+
+                <div class="pricing-disclaimer">
+                    <strong>Important Note:</strong> Meta Ad packages cover strategy, setup, management, and operations.
+                    The actual advertising budget is paid directly to Meta by the client. We provide full setup support
+                    for international payment cards.
                 </div>
             </div>
         </section>
     </main>
 
-    <script src="script.js?v=14"></script>
+    <script src="script.js?v=15"></script>
 </body>
 
 </html>
